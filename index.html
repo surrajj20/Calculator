@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CALCULATOR</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+</style>
+
+<body
+	style="background-image: url(computer.jpg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+
+
+	<div class="container-fluid maindivs" style="max-width:400px;padding-top:5%; " align="center">
+		<br>
+		<br>
+		<div class="row container-fluid"
+			style="background-color:#8AD94E; margin-top:0px;border-radius:6%;box-shadow: 0 0 7px #000;" align="center">
+			<h3 class="row" style="color:#0F4F98;margin-top:3px;margin-left:1px;width:400px;text-shadow: 0 0 1px black;"
+				align="center">CALCULATOR</h3>
+			<input id="input" class="row form-control" style="text-align:right;color:black;font-size:35px;"
+				type="text" />
+			<br>
+			<div class="col-sm-8"
+				style=" background: linear-gradient(to top right, #33ccff 0%, #ff0000 100%);border:1px solid darkgrey;border-right:1px solid transparent;border-top-left-radius:5px;border-bottom-left-radius:5px;">
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">1</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">2</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">3</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">4</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">5</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">6</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">7</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">8</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">9</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">0</button>
+
+
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">+</button>
+
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">-</button>
+
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">&#10005;</button>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn-lg">/</button>
+				<button onclick="Answer()"
+					style="margin-top:-5px;width:95px;height:48px;background-color:#1818D2;color:black;outline:none;"
+					class="btn btn-lg">=</button>
+			</div>
+			<div class="col-sm-4"
+				style=" background: linear-gradient(to top right, #33ccff 0%, #ff0000 100%); border:1px solid darkgrey;border-left:1px solid transparent;border-top-right-radius:5px;border-bottom-right-radius:5px;">
+				<button id="BackspaceBtn"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn btn-lg"><i class="fa fa-angle-left"></i></button><br>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn btn-lg">%</button><br>
+				<button onclick="PressButton(this)"
+					style="margin-top:5px;width:45px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn btn-lg">+</button><br>
+				<button onclick="ClearAll()"
+					style="margin-top:5px;width:73px;height:48px;background-color:#E96060;color:black;outline:none;"
+					class="btn btn-lg">CLR</button><br>
+
+			</div>
+			<h2 style="visibility:hidden;">asd</h2>
+
+
+		</div>
+	</div>
+	<div class="footer" style="color: green;padding-top: 4%">
+		<footer>
+			<br>
+			<center><b>&copy; 2019</b><br />
+				<b>MADE BY SURAJ SAH</b>
+			</center>
+		</footer>
+	</div>
+
+</body>
+<script type="text/javascript">
+	var SepInput = "";
+	var Val1 = "";
+	var Val2 = "";
+	var Operator = "";
+	var operatorArray = ["+", "-", "/", "✕", "*"];
+	var WrongInput = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m", ",", ";", "!", "@", "#", "$", "%", "&", "(", ")", "?"];
+	$('#input').keypress(function (e) {
+		var Keyvalue = this.value + String.fromCharCode(e.keyCode);
+		if (e.keyCode == "13") {
+			Answer();
+			return false;
+
+		}
+		for (var i = 0; i < WrongInput.length; i++) {
+			if (WrongInput[i] == Keyvalue) {
+				e.preventDefault();
+			}
+		}
+
+	});
+	function clearLast() {
+		var val = $('#input').val();
+		var len = val.length;
+		var data = val.substring(0, len - 1);
+		$('#input').val(data);
+	}
+	$('#BackspaceBtn').on("mousedown", function () {
+		clearLast();
+		timer = setInterval(function () {
+			clearLast();
+		}, 170);
+	}).on("mouseup mouseleave", function () {
+		clearInterval(timer);
+	});
+
+	function PressButton(item) {
+		$("#input").val($("#input").val() + item.innerHTML);
+	}
+	function InputSeparator(SepInput) {
+		var AppendStatus = "first";
+		for (var i = 0; i < SepInput.length; i++) {
+			if (AppendStatus == "first") {
+				for (var j = 0; j < operatorArray.length; j++) {
+					if (SepInput[i] == operatorArray[j]) {
+						Operator = operatorArray[j];
+						AppendStatus = "second";
+
+					}
+
+				}
+				if (AppendStatus == "second") {
+					continue;
+				}
+				Val1 += SepInput[i];
+			}
+
+			if (AppendStatus == "second") {
+				Val2 += SepInput[i];
+			}
+
+		}
+
+	}
+	function Answer() {
+		Val1 = "";
+		Val2 = "";
+		if ($("input").val() == "") {
+			return false;
+		}
+		else {
+			InputSeparator($("input").val());
+		}
+		switch (Operator) {
+			case "+":
+				text = parseInt(Val1) + parseInt(Val2);
+				break;
+			case "-":
+				text = parseInt(Val1) - parseInt(Val2);
+				break;
+			case "/":
+				text = parseInt(Val1) / parseInt(Val2);
+				break;
+			case "✕":
+				text = parseInt(Val1) * parseInt(Val2);
+				break;
+			case "*":
+				text = parseInt(Val1) * parseInt(Val2);
+				break;
+			case "%":
+				alert("")
+				text = parseInt(Val1) % parseInt(Val2);
+				break;
+			default:
+				text = "00";
+		}
+		$('#input').val(text);
+	}
+	function ClearAll() {
+		$('#input').val("");
+	}
+</script>
+
+</html>
